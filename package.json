@@ -1,0 +1,14 @@
+{
+  "name": "msga-poc",
+  "version": "0.0.1",
+  "description": "POC for MSGA",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Patrick Nikanti",
+  "license": "ISC",
+  "dependencies": {
+    "msga": "github:pnikanti/msga"
+  }
+}
