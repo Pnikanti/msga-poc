@@ -1,5 +1,5 @@
-import { Button } from "@/components/Button";
-import { useState } from "@/msga/msga.js";
+import { Button } from "../components/Button.js";
+import { useState } from "../msga/msga.js";
 
 export const Welcome = ({ text }) => {
     const f = [

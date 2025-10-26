@@ -1,13 +1,22 @@
 {
-  "name": "msga-poc",
-  "version": "0.0.1",
-  "description": "POC for MSGA",
+  "name": "msga-test",
+  "version": "1.0.0",
+  "description": "1. npm init -y 2. npm install pnikanti/msga 3. npx msga dev",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pnikanti/msga-poc.git"
+  },
   "keywords": [],
-  "author": "Patrick Nikanti",
+  "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pnikanti/msga-poc/issues"
+  },
+  "homepage": "https://github.com/Pnikanti/msga-poc#readme",
   "dependencies": {
     "msga": "github:pnikanti/msga"
   }

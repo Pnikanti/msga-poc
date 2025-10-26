@@ -1,10 +1,8 @@
-import "/msga/msga.css";
-import "/app.css";
-import { createApp } from "@/msga/msga.js";
-import { Welcome } from "@/components/Welcome";
+import { routes } from "./routes.js";
+import { createApp, Router } from "./msga/msga.js";
 
 const App = () => (
-    <Welcome text="Content Generation"/>
+    <Router routes={routes} />
 )
 
 createApp(App);
