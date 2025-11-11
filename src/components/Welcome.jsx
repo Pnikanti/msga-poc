@@ -1,5 +1,5 @@
 import { Button } from "../components/Button.js";
-import { useState } from "../msga/msga.js";
+import { useState, useEffect } from "../msga/msga.js";
 
 export const Welcome = ({ text }) => {
     const f = [
@@ -29,19 +29,25 @@ export const Welcome = ({ text }) => {
     const [counter, setCounter] = useState(0);
     const [fruits, setFruits] = useState([]);
 
+    useEffect(() => {
+        console.log(text);
+    }, []);
+
+    useEffect(() => {
+        console.log("Fruit added: " + fruits[fruits.length - 1])
+    }, [fruits]);
+
+    useEffect(() => {
+        console.log("Counter updated: " + counter);
+    }, [counter]);
+
     const incrementCounter = () => {
         setFruits([...fruits, f[counter]]);
         setCounter(counter + 1);
     }
 
     return (
-        <div class="bg-stone-900 w-screen h-screen flex flex-row justify-evenly items-center">
-            <div class="flex flex-col justify-center items-center">
-                <h1 class="text-yellow-400 text-2xl">Fruits</h1>
-                {
-                    fruits.map((fruit, i) => <p class="text-white italic transform transition duration-300 ease-out" style={{ animation: `pop 0.3s ease-out ${i * 0.05}s forwards` }}>{fruit}</p>)
-                }
-            </div>
+        <div class="bg-stone-900 flex flex-col justify-center items-center gap-4">
             <div class="flex flex-col justify-center items-center">
                 <h1 class="text-3xl text-white self-center">From app.jsx 🔥</h1>
                 <div class="flex flex-row gap-2 justify-center items-center p-2">
@@ -50,6 +56,12 @@ export const Welcome = ({ text }) => {
                     <p class="text-md italic text-gray-200">Great Again</p>
                 </div>
                 <h1 class="text-white text-2xl flex flex-row gap-2">Click counter: <h1 class="text-yellow-400 text-2xl">{counter}</h1></h1>
+            </div>
+            <div class="flex flex-col items-center h-72 w-50 overflow-y-auto bg-stone-800 rounded-xl p-4">
+                <h1 class="text-yellow-400 text-2xl">Fruits</h1>
+                {
+                    fruits.map((fruit, i) => <p class="text-white italic transform transition duration-300 ease-out" style={{ animation: `pop 0.3s ease-out ${i * 0.05}s forwards` }}>{fruit}</p>)
+                }
             </div>
         </div>
     )

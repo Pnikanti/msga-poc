@@ -4,7 +4,7 @@
   "description": "1. npm init -y 2. npm install pnikanti/msga 3. npx msga dev",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "echo \"Hi Mom!\""
   },
   "repository": {
     "type": "git",
